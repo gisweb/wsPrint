@@ -55,15 +55,16 @@ class gwPrint{
             $msg1="Overwriting:";// $dirname/$filename";
             $msg2="convert";// $dirname/$filename";
             if (stripos($r,$msg1)===FALSE and stripos($r,$msg2)===FALSE){
-                utils::debug("ERROR-CONVERT.debug",$r);
+                utils::debug("CONVERT.debug",$r);
                 $msg=$r;
             }
             else{
                 $t=self::readFile($name);
                 if ($t["size"]>0){
                     $res["success"]=1;
-                    $msg="";
+                    $msg="Conversione Avvenuta con Successo";
                     $res["file"]=base64_encode($t["file"]);
+                    $res["file"]=$t["file"];
                 }
                 else{
                     $msg=$t["message"];
