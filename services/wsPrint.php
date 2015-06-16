@@ -128,7 +128,7 @@ function convertiFiles($files,$data=Array()){
             $result["success"]=(int)($result["success"] || $r["success"]);
             if ($r["message"]) $result["messages"][]=$r["message"];
             if ($r["errors"]) $result["errors"][]=$r["errors"];
-            if ($r["file"] && $r["size"]>0) {
+            if ($r["file"]) {
                 $file["file"]=$r["file"];
                 
                 $result["files"][]=$file;
