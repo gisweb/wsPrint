@@ -1,8 +1,6 @@
 <?php
 require_once "../config/config.php";
 class gwPrint{
-    
-    
     static function writeFile($name,$t){
         if (!$t){
             utils::debug("WRITEFILE.debug", "Nessu dato da scivere sul file $name");
