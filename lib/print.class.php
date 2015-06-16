@@ -65,7 +65,7 @@ class gwPrint{
                 if ($t["size"]>0){
                     $res["success"]=1;
                     $msg="";
-                    $res["file"]=$t["file"];
+                    $res["file"]=base64_encode($t["file"]);
                 }
                 else{
                     $msg=$t["message"];
