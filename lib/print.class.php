@@ -64,7 +64,7 @@ class gwPrint{
                     $res["success"]=1;
                     $msg="Conversione Avvenuta con Successo";
                     $res["file"]=base64_encode($t["file"]);
-                    $res["file"]=$t["file"];
+                    
                 }
                 else{
                     $msg=$t["message"];
