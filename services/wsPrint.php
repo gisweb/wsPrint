@@ -121,10 +121,8 @@ function convertiFiles($files,$data=Array()){
                     $testo=$r["file"];
                 }
             }
-            utils::debug("TESTO.debug",$testo);
             $infoFile=pathinfo($file["oldname"]);
             $r = gwPrint::convertToPDF($testo,$infoFile["extension"]);
-            utils::debug("FILE.debug",$r);
             $result["success"]=(int)($result["success"] || $r["success"]);
             if ($r["message"]) $result["messages"][]=$r["message"];
             if ($r["errors"]) $result["errors"][]=$r["errors"];
@@ -135,7 +133,7 @@ function convertiFiles($files,$data=Array()){
             }
         }
     }
-    utils::debug('RESULT-CONVERT', $result);
+    utils::debug('RESULT-CONVERT.debug', $result);
     return $result;
 }
 function creaFiles($files,$data=Array()){
