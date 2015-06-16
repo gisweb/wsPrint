@@ -11,7 +11,7 @@ $server->configureWSDL('wsPrint', SERVICE_URL);
 $server->wsdl->addComplexType('file','complexType','struct','all','',Array(
     "oldname"=>Array("name"=>"filename","type"=>"xsd:string"),
     "newname"=>Array("name"=>"filename","type"=>"xsd:string"),
-    "file"=>Array("name"=>"file","type"=>"xsd:base64Binary")
+    "file"=>Array("name"=>"file","type"=>"xsd:string")
 ));
 $server->wsdl->addComplexType(
     'files',
