@@ -135,6 +135,7 @@ function convertiFiles($files,$data=Array()){
             }
         }
     }
+    utils::debug('RESULT-CONVERT', $result);
     return $result;
 }
 function creaFiles($files,$data=Array()){
